@@ -23,29 +23,33 @@ LTI setup
 * As admin, create a site that you’ll install the turnitin API tool into. If you can manage to set the siteid to !turnitin, do so. For me the admin site interface doesn’t let me choose the site ID. Once you create the site, remember the ID.
 * Add an LTI tool via Admin Workspace > External Tools. The configuration for the tool on LIVE should be
 
-Site ID: !turnitin [or whatever site ID your site uses]
-Tool Title: Turnitin
-Allow tool title to be changed
-Set Button Text - Turnitin
-Do not allow button text to be changed
-Description - optional
-Tool status: Enabled
-Tool visibility: stealthed [I don’t recommend this. It makes it hard to add the tool to the site]
-Launch URL - https://api.turnitinuk.com/api/lti/1p0/assignment or equivalent for the US, Spain etc.
-  for most people this will be https://api.turnitin.com/api/lti/1p0/assignment
-Do not allow URL to be changed
-Tool Key - nnnn - your Turnitin account number
-Do not allow Launch Key to be changed
-Secret - the secret your Turnitin administrator created when configuring the LTI API
-Do not allow Launch Secret to be changed
-Do not allow frame height to be changed
-Open in a New Windows - checked.
-Send Names to the External Tool - checked.
-Send Email Addresses to the External Tool. - checked.
-Allow External Tool to return grades - checked.
-Never Launch in pop-up
-(In production) Never launch in debug mode
-Allow additional custom parameters ********* very critical
+Properties for LTI tool:
+
+* Site ID: !turnitin [or whatever site ID your site uses]
+* Tool Title: Turnitin
+* Allow tool title to be changed
+* Set Button Text - Turnitin
+* Do not allow button text to be changed
+* Description - optional
+* Tool status: Enabled
+* Tool visibility: stealthed [I don’t recommend this. It makes it hard to add the tool to the site]
+* Launch URL - https://api.turnitinuk.com/api/lti/1p0/assignment or equivalent for the US, Spain etc.
+
+For most people this will be https://api.turnitin.com/api/lti/1p0/assignment
+
+* Do not allow URL to be changed
+* Tool Key - nnnn - your Turnitin account number
+* Do not allow Launch Key to be changed
+* Secret - the secret your Turnitin administrator created when configuring the LTI API
+* Do not allow Launch Secret to be changed
+* Do not allow frame height to be changed
+* Open in a New Windows - checked.
+* Send Names to the External Tool - checked.
+* Send Email Addresses to the External Tool. - checked.
+* Allow External Tool to return grades - checked.
+* Never Launch in pop-up
+* (In production) Never launch in debug mode
+* Allow additional custom parameters ********* very critical
 
 For test, use  https://sandbox.turnitin.com/api/lti/1p0/assignment, though I'm not sure what kind of arrangements you need with Turnitin for that to work. We used the production URL.
 
